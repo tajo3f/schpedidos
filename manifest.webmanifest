@@ -1,0 +1,16 @@
+{
+  "name": "Pedidos Online - Supermercado Schwambach",
+  "short_name": "Pedidos Schwambach",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#0b6aa8",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

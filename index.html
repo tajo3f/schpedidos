@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b6aa8">
+  <meta name="description" content="Faça seu pedido no Supermercado Schwambach de forma rápida e envie todos os dados organizados para a recepção pelo WhatsApp.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pedidos Online | Supermercado Schwambach">
+  <meta property="og:description" content="Monte seu pedido, informe entrega e pagamento e envie tudo organizado para a recepção pelo WhatsApp.">
+  <meta property="og:image" content="assets/images/logo-schwambach.webp">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Pedidos Online | Supermercado Schwambach</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#pedidoForm">Ir para o formulário</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <img src="assets/images/logo-schwambach.webp" alt="Logomarca do Supermercado Schwambach" width="92" height="92">
+        <div>
+          <p class="eyebrow">Supermercado Schwambach</p>
+          <h1>Pedidos Online</h1>
+          <p class="brand__sub">Seu pedido organizado e enviado direto para nossa recepção.</p>
+        </div>
+      </div>
+      <div class="channel-badge" aria-label="Atendimento pelo WhatsApp">
+        <span class="channel-badge__dot" aria-hidden="true"></span>
+        Atendimento via WhatsApp
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="pill">Rápido • simples • sem cadastro</span>
+          <h2 id="hero-title">Faça sua lista e envie tudo de uma vez.</h2>
+          <p>Preencha seus dados, informe os produtos, escolha a forma de pagamento e confira antes de abrir o WhatsApp.</p>
+          <div class="hero__trust">
+            <div><strong>1</strong><span>Preencha</span></div>
+            <div class="hero__line" aria-hidden="true"></div>
+            <div><strong>2</strong><span>Confira</span></div>
+            <div class="hero__line" aria-hidden="true"></div>
+            <div><strong>3</strong><span>Envie</span></div>
+          </div>
+        </div>
+        <aside class="hero__note" aria-label="Informação importante">
+          <div class="hero__note-icon" aria-hidden="true">i</div>
+          <div>
+            <strong>Antes de enviar</strong>
+            <p>Confira endereço, itens e quantidades. O pedido só será confirmado após o retorno da recepção.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container order-layout">
+        <form id="pedidoForm" class="order-form" novalidate>
+          <section class="form-card" aria-labelledby="dados-title">
+            <div class="section-heading">
+              <span class="section-number">1</span>
+              <div>
+                <h3 id="dados-title">Seus dados</h3>
+                <p>Precisamos dessas informações para identificar seu pedido.</p>
+              </div>
+            </div>
+
+            <div class="field-grid field-grid--2">
+              <div class="field field--full-mobile">
+                <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+                <input id="nome" name="nome" type="text" autocomplete="name" maxlength="90" placeholder="Ex.: Maria Aparecida" required>
+                <small class="field-error" data-error-for="nome"></small>
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+                <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="(27) 99999-9999" required>
+                <small class="field-error" data-error-for="telefone"></small>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-card" aria-labelledby="entrega-title">
+            <div class="section-heading">
+              <span class="section-number">2</span>
+              <div>
+                <h3 id="entrega-title">Endereço de entrega</h3>
+                <p>Quanto mais completo, mais fácil localizar sua entrega.</p>
+              </div>
+            </div>
+
+            <div class="field-grid field-grid--12">
+              <div class="field col-8">
+                <label for="endereco">Rua / Avenida / Localidade <span aria-hidden="true">*</span></label>
+                <input id="endereco" name="endereco" type="text" autocomplete="street-address" maxlength="120" placeholder="Ex.: Rua João XXIII" required>
+                <small class="field-error" data-error-for="endereco"></small>
+              </div>
+              <div class="field col-4">
+                <label for="numero">Número</label>
+                <input id="numero" name="numero" type="text" maxlength="15" placeholder="Ex.: 125 ou S/N">
+              </div>
+              <div class="field col-6">
+                <label for="bairro">Bairro / Comunidade <span aria-hidden="true">*</span></label>
+                <input id="bairro" name="bairro" type="text" maxlength="70" placeholder="Ex.: Centro" required>
+                <small class="field-error" data-error-for="bairro"></small>
+              </div>
+              <div class="field col-6">
+                <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
+                <input id="cidade" name="cidade" type="text" maxlength="70" value="Afonso Cláudio - ES" required>
+                <small class="field-error" data-error-for="cidade"></small>
+              </div>
+              <div class="field col-6">
+                <label for="complemento">Complemento</label>
+                <input id="complemento" name="complemento" type="text" maxlength="80" placeholder="Ex.: Casa, apto, fundos">
+              </div>
+              <div class="field col-6">
+                <label for="referencia">Ponto de referência</label>
+                <input id="referencia" name="referencia" type="text" maxlength="100" placeholder="Ex.: Próximo à igreja">
+              </div>
+            </div>
+          </section>
+
+          <section class="form-card" aria-labelledby="itens-title">
+            <div class="section-heading section-heading--action">
+              <div class="section-heading__title">
+                <span class="section-number">3</span>
+                <div>
+                  <h3 id="itens-title">Itens do pedido</h3>
+                  <p>Adicione um produto por linha, com quantidade e observação se precisar.</p>
+                </div>
+              </div>
+              <span id="itemCountBadge" class="count-badge">1 item</span>
+            </div>
+
+            <div id="itemsList" class="items-list" aria-live="polite"></div>
+
+            <button type="button" id="addItemBtn" class="btn btn--secondary btn--full-mobile">
+              <span aria-hidden="true">＋</span> Adicionar outro produto
+            </button>
+
+            <div class="switch-card">
+              <label class="switch-row" for="confirmarSubstituicao">
+                <input id="confirmarSubstituicao" name="confirmarSubstituicao" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+                <span>
+                  <strong>Falar comigo antes de substituir produtos</strong>
+                  <small>Marque se prefere aprovar outra marca, tamanho ou opção.</small>
+                </span>
+              </label>
+            </div>
+
+            <div class="field field--spaced">
+              <label for="observacoesPedido">Observações do pedido</label>
+              <textarea id="observacoesPedido" name="observacoesPedido" rows="3" maxlength="300" placeholder="Ex.: Se não tiver uma das marcas, pode enviar outra semelhante."></textarea>
+              <div class="field-meta"><span>Opcional</span><span id="obsCounter">0/300</span></div>
+            </div>
+          </section>
+
+          <section class="form-card" aria-labelledby="pagamento-title">
+            <div class="section-heading">
+              <span class="section-number">4</span>
+              <div>
+                <h3 id="pagamento-title">Pagamento e nota fiscal</h3>
+                <p>Escolha como pretende pagar no atendimento.</p>
+              </div>
+            </div>
+
+            <fieldset class="choice-group" id="paymentGroup">
+              <legend>Forma de pagamento <span aria-hidden="true">*</span></legend>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="radio" name="pagamento" value="Dinheiro" required>
+                  <span class="choice-card__icon" aria-hidden="true">R$</span>
+                  <span>Dinheiro</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="pagamento" value="Débito">
+                  <span class="choice-card__icon" aria-hidden="true">D</span>
+                  <span>Débito</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="pagamento" value="Crédito">
+                  <span class="choice-card__icon" aria-hidden="true">C</span>
+                  <span>Crédito</span>
+                </label>
+                <label class="choice-card">
+                  <input type="radio" name="pagamento" value="PIX">
+                  <span class="choice-card__icon" aria-hidden="true">PIX</span>
+                  <span>PIX</span>
+                </label>
+              </div>
+              <small class="field-error" data-error-for="pagamento"></small>
+            </fieldset>
+
+            <div id="trocoWrap" class="conditional-panel" hidden>
+              <div class="field">
+                <label for="troco">Precisa de troco? Para quanto?</label>
+                <input id="troco" name="troco" type="text" inputmode="decimal" maxlength="18" placeholder="Ex.: R$ 100,00 ou sem troco">
+              </div>
+            </div>
+
+            <div class="switch-card switch-card--invoice">
+              <label class="switch-row" for="notaFiscal">
+                <input id="notaFiscal" name="notaFiscal" type="checkbox">
+                <span class="switch" aria-hidden="true"></span>
+                <span>
+                  <strong>Preciso de nota fiscal</strong>
+                  <small>Se desejar, informe CPF ou CNPJ abaixo.</small>
+                </span>
+              </label>
+            </div>
+
+            <div id="notaWrap" class="conditional-panel" hidden>
+              <div class="field-grid field-grid--2">
+                <div class="field">
+                  <label for="documentoFiscal">CPF ou CNPJ</label>
+                  <input id="documentoFiscal" name="documentoFiscal" type="text" inputmode="numeric" maxlength="18" placeholder="Somente se desejar informar">
+                </div>
+                <div class="field">
+                  <label for="nomeFiscal">Nome / Razão social</label>
+                  <input id="nomeFiscal" name="nomeFiscal" type="text" maxlength="100" placeholder="Opcional">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-card form-card--final" aria-labelledby="final-title">
+            <div class="section-heading">
+              <span class="section-number">5</span>
+              <div>
+                <h3 id="final-title">Conferir e enviar</h3>
+                <p>Seu pedido será montado em uma mensagem organizada para o WhatsApp.</p>
+              </div>
+            </div>
+
+            <label class="consent-row" for="consentimento">
+              <input id="consentimento" name="consentimento" type="checkbox" required>
+              <span>Confirmo que revisei meus dados e autorizo o uso das informações acima somente para atendimento deste pedido.</span>
+            </label>
+            <small class="field-error" data-error-for="consentimento"></small>
+
+            <div class="final-actions">
+              <button type="button" id="clearBtn" class="btn btn--ghost">Limpar</button>
+              <button type="submit" class="btn btn--primary btn--large">
+                Conferir pedido <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <p class="autosave-note" id="autosaveStatus">Rascunho salvo automaticamente neste aparelho.</p>
+          </section>
+        </form>
+
+        <aside class="desktop-summary" aria-label="Resumo rápido do pedido">
+          <div class="desktop-summary__card">
+            <span class="desktop-summary__eyebrow">Resumo rápido</span>
+            <h3>Seu pedido</h3>
+            <dl>
+              <div><dt>Itens</dt><dd id="sideItemCount">1</dd></div>
+              <div><dt>Pagamento</dt><dd id="sidePayment">Não informado</dd></div>
+              <div><dt>Nota fiscal</dt><dd id="sideInvoice">Não</dd></div>
+            </dl>
+            <div class="desktop-summary__divider"></div>
+            <p>Ao finalizar, o WhatsApp será aberto com todos os dados já formatados para a recepção.</p>
+            <div class="desktop-summary__security">
+              <span aria-hidden="true">✓</span>
+              <span>Sem cadastro e sem senha.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/images/logo-schwambach.webp" alt="" width="48" height="48">
+        <div><strong>Supermercado Schwambach</strong><span>Pedidos Online</span></div>
+      </div>
+      <p>Em caso de dúvida, entre em contato com a recepção.</p>
+    </div>
+  </footer>
+
+  <div id="reviewModal" class="modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="reviewTitle">
+      <header class="modal__header">
+        <div>
+          <span class="pill pill--small">Última etapa</span>
+          <h2 id="reviewTitle">Confira seu pedido</h2>
+        </div>
+        <button type="button" class="icon-btn" data-close-modal aria-label="Fechar conferência">×</button>
+      </header>
+
+      <div class="modal__body">
+        <div id="reviewContent" class="review-content"></div>
+        <div class="review-alert">
+          <strong>Importante:</strong> ao tocar em enviar, o WhatsApp será aberto. Para concluir, você ainda precisa tocar no botão de envio dentro do WhatsApp.
+        </div>
+      </div>
+
+      <footer class="modal__footer">
+        <button type="button" id="copyBtn" class="btn btn--secondary">Copiar resumo</button>
+        <button type="button" id="whatsappBtn" class="btn btn--whatsapp btn--large">Enviar no WhatsApp</button>
+      </footer>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <template id="itemTemplate">
+    <article class="item-card">
+      <div class="item-card__header">
+        <span class="item-card__index">Item 1</span>
+        <button type="button" class="item-card__remove" aria-label="Remover item">Remover</button>
+      </div>
+      <div class="field-grid item-card__grid">
+        <div class="field item-card__product">
+          <label>Produto <span aria-hidden="true">*</span></label>
+          <input class="item-name" type="text" maxlength="100" placeholder="Ex.: Arroz 5 kg" required>
+          <small class="field-error"></small>
+        </div>
+        <div class="field item-card__qty">
+          <label>Quantidade <span aria-hidden="true">*</span></label>
+          <input class="item-qty" type="text" maxlength="30" placeholder="Ex.: 2 un / 500 g" required>
+          <small class="field-error"></small>
+        </div>
+        <div class="field item-card__obs">
+          <label>Observação</label>
+          <input class="item-obs" type="text" maxlength="120" placeholder="Ex.: Marca preferida, sabor, tamanho...">
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
